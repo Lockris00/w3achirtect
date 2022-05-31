@@ -1,5 +1,6 @@
 .about {
   padding-bottom: 16px;
+  display: block;
   &-header {
     padding: 32px 16px;
   }
@@ -22,5 +23,37 @@
   &-role {
     font-size: 1.6rem;
     opacity: 0.6;
+  }
+
+  @include maxWidth(1279px) {
+    &-img {
+      height: 148px;
+    }
+  }
+
+  @include maxWidth(1023px) {
+    &-list {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &-img {
+      height: 222px;
+    }
+  }
+
+  @include maxWidth(767px) {
+    &-list {
+      grid-template-columns: 1fr;
+    }
+
+    &-img {
+      height: 342px;
+    }
+  }
+
+  @include maxWidth(380px) {
+    &-img {
+      height: 193px;
+    }
   }
 }

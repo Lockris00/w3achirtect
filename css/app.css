@@ -82,19 +82,15 @@ section {
   margin-bottom: 16px;
   flex-direction: column;
 }
-
-.form-label,
-.form-message {
+.form-label, .form-message {
   text-align: left;
 }
-
 .form-label {
   font-weight: 700;
   padding-bottom: 6px;
   line-height: 1.8rem;
   font-size: 1.4rem;
 }
-
 .form-control {
   height: 40px;
   padding: 8px 12px;
@@ -103,23 +99,24 @@ section {
   outline: none;
   font-size: 1.4rem;
 }
-
 .form-control:hover {
   border-color: #333;
 }
-
 .form-group.invalid .form-control {
   border-color: #f33a58;
 }
-
 .form-group.invalid .form-message {
   color: #f33a58;
 }
-
 .form-message {
   font-size: 1.2rem;
   line-height: 1.6rem;
   padding: 8px 2px 0;
+}
+@media screen and (max-width: 1279px) {
+  .form-control {
+    font-size: 1.6rem;
+  }
 }
 
 .header {
@@ -148,9 +145,28 @@ section {
 .header-link:hover {
   background-color: #ccc;
 }
+.header-tool {
+  display: none;
+}
 @media screen and (max-width: 1599px) {
   .header-main {
     padding: 0 8px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .header-tool {
+    display: block;
+    float: right;
+    color: black;
+    line-height: 55px;
+    font-size: 1.4rem;
+    padding: 0 24px;
+    cursor: pointer;
+  }
+  .header-tool .icon-menu {
+    font-size: 18px;
+    position: relative;
+    top: 3px;
   }
 }
 .menu-list {
@@ -340,6 +356,7 @@ section {
 
 .about {
   padding-bottom: 16px;
+  display: block;
 }
 .about-header {
   padding: 32px 16px;
@@ -361,9 +378,36 @@ section {
   font-size: 1.6rem;
   opacity: 0.6;
 }
+@media screen and (max-width: 1279px) {
+  .about-img {
+    height: 148px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .about-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-img {
+    height: 222px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about-list {
+    grid-template-columns: 1fr;
+  }
+  .about-img {
+    height: 342px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .about-img {
+    height: 193px;
+  }
+}
 
 .contact {
   padding: 32px 16px;
+  display: block;
 }
 .contact-header {
   padding: 0 16px;
@@ -374,6 +418,7 @@ section {
 
 .map {
   padding: 0 32px;
+  display: block;
 }
 .map-img {
   width: 100%;
@@ -383,7 +428,7 @@ section {
 .footer {
   background-color: black;
   height: 85px;
-  display: none;
+  display: flex;
   align-items: center;
 }
 .footer-copyright {

@@ -24,6 +24,10 @@
     }
   }
 
+  &-tool {
+    display: none;
+  }
+
   @include maxWidth(1599px) {
     &-main {
       padding: 0 8px;
@@ -34,6 +38,20 @@
   }
 
   @include maxWidth(1023px) {
+    &-tool {
+      display: block;
+      float: right;
+      color: black;
+      line-height: $header-height;
+      font-size: 1.4rem;
+      padding: 0 24px;
+      cursor: pointer;
+      .icon-menu {
+        font-size: 18px;
+        position: relative;
+        top: 3px;
+      }
+    }
   }
 
   @include maxWidth(767px) {

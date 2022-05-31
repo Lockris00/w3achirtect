@@ -1,44 +1,44 @@
-.form-group {
-  display: flex;
-  margin-bottom: 16px;
-  flex-direction: column;
-}
-
-.form-label,
-.form-message {
-  text-align: left;
-}
-
-.form-label {
-  font-weight: 700;
-  padding-bottom: 6px;
-  line-height: 1.8rem;
-  font-size: 1.4rem;
-}
-
-.form-control {
-  height: 40px;
-  padding: 8px 12px;
-  border: 1px solid #b3b3b3;
-  border-radius: 3px;
-  outline: none;
-  font-size: 1.4rem;
-}
-
-.form-control:hover {
-  border-color: #333;
-}
-
-.form-group.invalid .form-control {
-  border-color: #f33a58;
-}
-
-.form-group.invalid .form-message {
-  color: #f33a58;
-}
-
-.form-message {
-  font-size: 1.2rem;
-  line-height: 1.6rem;
-  padding: 8px 2px 0;
+.form {
+  &-group {
+    display: flex;
+    margin-bottom: 16px;
+    flex-direction: column;
+  }
+  &-label,
+  &-message {
+    text-align: left;
+  }
+  &-label {
+    font-weight: 700;
+    padding-bottom: 6px;
+    line-height: 1.8rem;
+    font-size: 1.4rem;
+  }
+  &-control {
+    height: 40px;
+    padding: 8px 12px;
+    border: 1px solid #b3b3b3;
+    border-radius: 3px;
+    outline: none;
+    font-size: 1.4rem;
+    &:hover {
+      border-color: #333;
+    }
+  }
+  &-group.invalid &-control {
+    border-color: #f33a58;
+  }
+  &-group.invalid &-message {
+    color: #f33a58;
+  }
+  &-message {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    padding: 8px 2px 0;
+  }
+  @include maxWidth(1279px) {
+    &-control {
+      font-size: 1.6rem;
+    }
+  }
 }

@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/app.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/app.css">
     <title>Document</title>
 </head>
 <body>
@@ -14,6 +15,7 @@
             <div class="container">
                 <div class="header-main">
                     <a href="#" class="header-link"><span>BR</span> Architects</a>
+
                     <nav class="menu">
                         <ul class="menu-list">
                             <li class="menu-item">
@@ -23,10 +25,14 @@
                                 <a href="#about" class="menu-link">About</a>
                             </li>
                             <li class="menu-item">
-                                <a href="#contact" class="menu-link">Contact</a>
+                                <a href="#contact" class="menu-link">Contact</i></a>
                             </li>
                         </ul>
                     </nav>
+
+                    <div class="header-tool">
+                        <i class="fa-solid fa-bars icon-menu menu-toggle"></i>
+                    </div>
                 </div>
             </div>
         </header>
@@ -191,5 +197,27 @@
       console.log(data)
     }
   })
+</script>
+
+<script>
+    let menuToggle = document.querySelector('.menu-toggle')
+        const menu = document.querySelector('.menu')
+        const header = document.querySelector('.header')
+        menuToggle.onclick = function() {
+            menu.classList.add('is-active')
+        }
+        document.onclick = function(e) {
+        if (!menu.contains(e.target) && !e.target.matches(".menu-toggle")) {
+            menu.classList.remove("is-active");
+        };
+    }
+        window.onscroll = function() {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop
+            if(scrollTop >= 100) {
+                header.classList.add('is-active')
+            }else {
+                header.classList.remove('is-active')
+            }
+        }
 </script>
 </html>
