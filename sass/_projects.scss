@@ -1,0 +1,79 @@
+.project {
+  padding-bottom: 16px;
+  display: block;
+  &-header {
+    padding: 32px 16px;
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 234px 234px;
+    grid-gap: 20px 16px;
+    padding: 0 16px;
+  }
+
+  &-item {
+    position: relative;
+  }
+
+  &-heading {
+    position: absolute;
+    top: 0px;
+    padding: 8px 16px;
+    background-color: black;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
+  &-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // Pc low solution
+  @include maxWidth(1599px) {
+  }
+
+  // Ipad pro
+  @include maxWidth(1279px) {
+    &-list {
+      grid-template-rows: 180px 180px;
+    }
+  }
+
+  // Ipad
+  @include maxWidth(1023px) {
+    &-header {
+      padding-top: 20px;
+      padding-bottom: 12px;
+    }
+
+    &-list {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 222px 222px 222px;
+    }
+  }
+
+  // Iphone
+  @include maxWidth(767px) {
+    &-header {
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+
+    &-list {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(8, 340px);
+    }
+  }
+
+  // Iphone X
+  @include maxWidth(380px) {
+    &-list {
+      grid-template-rows: repeat(8, 190px);
+    }
+  }
+}

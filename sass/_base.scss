@@ -1,0 +1,63 @@
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  font-family: $primary-font;
+}
+body {
+  font-size: 1.6rem;
+}
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.main {
+  padding: 8px 0;
+}
+.full-width {
+  width: 100%;
+}
+.border-bottom-1 {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.pad-y-16 {
+  padding: 16px 0;
+}
+
+.title {
+  font-size: 2.4rem;
+  display: block;
+  margin: 10px 0;
+}
+.desc {
+  font-size: 16px;
+  margin: 15px 0;
+  line-height: lineH(23, 16);
+}
+.btn {
+  padding: 8px 16px;
+  color: #333;
+  background-color: #f1f1f1;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    background-color: #ccc;
+    color: #333;
+  }
+  &--primary {
+    background-color: black;
+    color: white;
+  }
+}
+
+section {
+  display: none;
+}

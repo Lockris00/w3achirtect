@@ -1,0 +1,18 @@
+.footer {
+  background-color: black;
+  height: 85px;
+  display: none;
+  align-items: center;
+  &-copyright {
+    margin: 0 auto;
+    display: block;
+    color: white;
+    a {
+      color: white;
+      text-decoration: underline;
+      &:hover {
+        color: #4caf50;
+      }
+    }
+  }
+}
